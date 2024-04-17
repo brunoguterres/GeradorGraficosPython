@@ -7,7 +7,7 @@ plt.rcParams['font.family'] = 'Times New Roman'
 plt.rcParams['font.size'] = 10
 plt.rcParams['font.style'] = 'normal'
 plt.rcParams["legend.framealpha"] = 1.0
-plt.rcParams["savefig.dpi"] = 300
+plt.rcParams["savefig.dpi"] = 1200
 
 path_fluviogramas_obs = 'dados\originais\Fluviogramas_observados.csv'
 path_fluviogramas_sim = 'dados\originais\Fluviogramas_simulados.csv'
@@ -54,11 +54,62 @@ axs[1].grid(True)
 axs[1].set_xticks([])
 axs[1].set_xticklabels([])
 
+# ESTAÇÃO: 38860000
+campo_x = 'Data'
+campo_y1 = '38860000'
+campo_y2 = '1971'
+axs[2].plot(df_fluv_obs[campo_x],
+            df_fluv_obs[campo_y1],
+            label='Observada')
+axs[2].plot(df_fluv_sim[campo_x],
+            df_fluv_sim[campo_y2],
+            label='Simulada')
+axs[2].set_ylabel('Vazão')
+axs[2].set_title(f'Fluviograma Estação {campo_y1}')
+axs[2].legend()
+axs[2].grid(True)
+axs[2].set_xticks([])
+axs[2].set_xticklabels([])
+
+# ESTAÇÃO: 38880000
+campo_x = 'Data'
+campo_y1 = '38880000'
+campo_y2 = '2018'
+axs[3].plot(df_fluv_obs[campo_x],
+            df_fluv_obs[campo_y1],
+            label='Observada')
+axs[3].plot(df_fluv_sim[campo_x],
+            df_fluv_sim[campo_y2],
+            label='Simulada')
+axs[3].set_ylabel('Vazão')
+axs[3].set_title(f'Fluviograma Estação {campo_y1}')
+axs[3].legend()
+axs[3].grid(True)
+axs[3].set_xticks([])
+axs[3].set_xticklabels([])
+
+# ESTAÇÃO: 38895000
+campo_x = 'Data'
+campo_y1 = '38895000'
+campo_y2 = '2039'
+axs[4].plot(df_fluv_obs[campo_x],
+            df_fluv_obs[campo_y1],
+            label='Observada')
+axs[4].plot(df_fluv_sim[campo_x],
+            df_fluv_sim[campo_y2],
+            label='Simulada')
+axs[4].set_ylabel('Vazão')
+axs[4].set_title(f'Fluviograma Estação {campo_y1}')
+axs[4].legend()
+axs[4].grid(True)
+axs[4].set_xticks([])
+axs[4].set_xticklabels([])
+
 # Define os rótulos nos eixos x
 for ax in axs:
     ax.set_xlabel('Data')
     ax.set_xticks(datas_x_labels)
-    ax.set_xticklabels(anos, rotation=45)
+    ax.set_xticklabels(anos)
 
 # Salvando a figura
 plt.tight_layout()
