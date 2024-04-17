@@ -7,7 +7,7 @@ plt.rcParams['font.family'] = 'Times New Roman'
 plt.rcParams['font.size'] = 10
 plt.rcParams['font.style'] = 'normal'
 plt.rcParams["legend.framealpha"] = 1.0
-plt.rcParams["savefig.dpi"] = 300
+plt.rcParams["savefig.dpi"] = 500
 plt.rcParams["lines.linewidth"] = 1
 
 path_fluviogramas_obs = 'dados\originais\Fluviogramas_observados.csv'
@@ -106,9 +106,8 @@ for ax in axs:
     ax.set_xticks(datas_labels)
     ax.set_xticklabels(anos)
 
-# Adicionando uma legenda única no rodapé da figura
-handles, labels = axs[0].get_legend_handles_labels()
-fig.legend(handles, labels, loc='lower center', ncol=2)
+rotulos = ["Observada", "Simulada"]
+legenda = axs[4].legend(rotulos, ncol=2, loc='lower center', bbox_to_anchor=(0.5, -0.5))
 
 # Salvando a figura
 plt.tight_layout()
