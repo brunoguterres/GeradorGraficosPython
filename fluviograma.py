@@ -19,7 +19,7 @@ datas_labels = ['1995-01-01', '2000-01-01', '2005-01-01', '2010-01-01', '2015-01
 anos = [1995, 2000, 2005, 2010, 2015]
 
 # Criando subplots
-fig, axs = plt.subplots(5, 1, figsize=(160/25.4, 230/25.4), sharex=True) # figsize está com mm/25.4 para definir valor em pol
+fig, axs = plt.subplots(5, 1, figsize=(160/25.4, 230/25.4), sharex=False) # figsize está com mm/25.4 para definir valor em pol
 
 # ESTAÇÃO: 38830000
 campo_x = 'Data'
@@ -103,7 +103,7 @@ axs[4].set_xticklabels([])
 
 # Define os rótulos nos eixos x
 for ax in axs:
-    ax.set_xticks(datas_x_labels)
+    ax.set_xticks(datas_labels)
     ax.set_xticklabels(anos)
 
 # Adicionando uma legenda única no rodapé da figura
