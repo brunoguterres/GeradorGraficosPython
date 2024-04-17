@@ -15,7 +15,7 @@ path_fluviogramas_sim = 'dados\originais\Fluviogramas_simulados.csv'
 df_fluv_obs = pd.read_csv(path_fluviogramas_obs)
 df_fluv_sim = pd.read_csv(path_fluviogramas_sim)
 
-datas_x_labels = ['1995-01-01', '2000-01-01', '2005-01-01', '2010-01-01', '2015-01-01']
+datas_labels = ['1995-01-01', '2000-01-01', '2005-01-01', '2010-01-01', '2015-01-01']
 anos = [1995, 2000, 2005, 2010, 2015]
 
 # Criando subplots
