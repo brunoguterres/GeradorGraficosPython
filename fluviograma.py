@@ -1,6 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Configuração do estilo
+plt.style.use('default')
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['font.size'] = 10
+plt.rcParams['font.style'] = 'normal'
+plt.rcParams["legend.framealpha"] = 1.0
+plt.rcParams["savefig.dpi"] = 300
+
 path_fluviogramas_obs = 'dados\originais\Fluviogramas_observados.csv'
 path_fluviogramas_sim = 'dados\originais\Fluviogramas_simulados.csv'
 df_fluv_obs = pd.read_csv(path_fluviogramas_obs)
@@ -20,11 +28,10 @@ plt.plot(df_fluv_sim[campo_x],
          label='Simulada')
 plt.xlabel('Data')
 plt.ylabel('Vazão')
-plt.title(f'Fluviograma (observado/simulado) - Estação {campo_y1}')
+plt.title(f'Fluviograma Estação {campo_y1}')
 plt.legend()
 plt.grid(True)
 plt.xticks(datas_x_labels, rotation=45)
-plt.show()
-
-#plt.savefig(f'fluviograma_observado_simulado_{campo_y1}.png')
-#plt.clf()
+plt.savefig(f'fluviograma_observado_simulado_{campo_y1}.png')
+plt.clf()
+print('<<< FINALIZADO >>>')
