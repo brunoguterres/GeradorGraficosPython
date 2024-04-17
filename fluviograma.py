@@ -1,11 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import time
-
-tempo_inicial = time.time()
 
 path_fluviogramas_obs = 'dados\originais\Fluviogramas_observados.csv'
-path_fluviogramas_sim = 'dados\originais\Fluviogramas_simulados 1.csv'
+path_fluviogramas_sim = 'dados\originais\Fluviogramas_simulados.csv'
 df_fluv_obs = pd.read_csv(path_fluviogramas_obs)
 df_fluv_sim = pd.read_csv(path_fluviogramas_sim)
 
@@ -26,10 +23,6 @@ plt.ylabel('Vazão')
 plt.title(f'Fluviograma (observado/simulado) - Estação {campo_y1}')
 plt.legend()
 plt.grid(True)
-
-tempo_final = time.time()
-print(f'tempo de execução: {tempo_final-tempo_inicial:.1f}s')
-
 plt.xticks(datas_x_labels, rotation=45)
 plt.show()
 
