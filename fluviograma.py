@@ -103,7 +103,6 @@ axs[4].set_xticklabels([])
 
 # Define os rótulos nos eixos x
 for ax in axs:
-    #ax.set_xlabel('Ano')
     ax.set_xticks(datas_x_labels)
     ax.set_xticklabels(anos)
 
