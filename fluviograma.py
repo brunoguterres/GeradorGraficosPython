@@ -14,11 +14,9 @@ df_fluv_sim = pd.read_csv(path_fluviogramas_sim)
 
 datas_x_labels = ['1995-01-01', '2000-01-01', '2005-01-01', '2010-01-01', '2015-01-01']
 
-valor_max_obs = df_fluv_obs['38830000'].max()
-print(f'valor máximo observado:{valor_max_obs}')
-indice_max_obs = df_fluv_obs['38830000'].idxmax()
-linha_max_obs = df_fluv_obs.loc[indice_max_obs]
-print(linha_max_obs)
+indice_max_sim = df_fluv_sim['1924'].idxmax()
+linha_max_sim = df_fluv_sim.loc[indice_max_sim]
+print(linha_max_sim)
 
 # ESTAÇÃO: 38830000
 campo_x = 'Data'
@@ -26,10 +24,11 @@ campo_y1 = '38830000'
 campo_y2 = '1924'
 plt.plot(df_fluv_obs[campo_x],
          df_fluv_obs[campo_y1],
-         linestyle='--'
+         linestyle=':',
          label='Observada')
 plt.plot(df_fluv_sim[campo_x],
          df_fluv_sim[campo_y2],
+         linestyle='-',
          label='Simulada')
 plt.xlabel('Data')
 plt.ylabel('Vazão')
