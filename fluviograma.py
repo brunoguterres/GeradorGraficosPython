@@ -15,6 +15,7 @@ df_fluv_obs = pd.read_csv(path_fluviogramas_obs)
 df_fluv_sim = pd.read_csv(path_fluviogramas_sim)
 
 datas_x_labels = ['1995-01-01', '2000-01-01', '2005-01-01', '2010-01-01', '2015-01-01']
+anos = [1995, 2000, 2005, 2010, 2015]
 
 # ESTAÇÃO: 38830000
 campo_x = 'Data'
@@ -31,7 +32,7 @@ plt.ylabel('Vazão')
 plt.title(f'Fluviograma Estação {campo_y1}')
 plt.legend()
 plt.grid(True)
-plt.xticks(datas_x_labels, rotation=45)
-plt.savefig(f'fluviograma_observado_simulado_{campo_y1}.png')
+plt.xticks(datas_x_labels, anos, rotation=45)
+plt.savefig(f'graficos/fluviograma_observado_simulado_{campo_y1}.png')
 plt.clf()
 print('<<< FINALIZADO >>>')
