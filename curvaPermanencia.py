@@ -35,6 +35,7 @@ for ax_index, (estacao, ano_simulado) in enumerate([('38830000', '1924'), ('3885
     axs[ax_index].set_ylabel('Vazão')
     axs[ax_index].set_title(f'Estação {campo_y1}')
     axs[ax_index].grid(True)
+    axs[ax_index].set_yscale('log')  # Definindo escala logarítmica no eixo y
 
 # Atualizando os ticks e os rótulos do eixo x
 for ax in axs:
