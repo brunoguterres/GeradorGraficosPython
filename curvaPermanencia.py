@@ -32,7 +32,7 @@ for ax_index, (estacao, ano_simulado) in enumerate([('38830000', '1924'), ('3885
     
     axs[ax_index].plot(valores_x_porcentagem[:len(dados_obs)], dados_obs, label='Observada')
     axs[ax_index].plot(valores_x_porcentagem[:len(dados_sim)], dados_sim, label='Simulada')
-    axs[ax_index].set_ylabel('Vazão')
+    axs[ax_index].set_ylabel('Vazão (m³/s)')
     axs[ax_index].set_title(f'Estação {campo_y1}')
     axs[ax_index].grid(True)
     axs[ax_index].set_yscale('log')  # Definindo escala logarítmica no eixo y
